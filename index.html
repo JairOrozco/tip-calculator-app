@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <title>Tip Calculator</title>
+</head>
+<body>
+
+    <h1>Tip Calculator</h1>
+    
+    <main class="tips">
+
+        <section class="tips__setData">
+
+            <div class="bill">
+                <div class="people__text">
+                    <h2 class="headers">Bill</h2>
+                    <p id="textWarningBill" class="hide">Can´t be zero</p>
+                </div>
+                <form id="formBill" class="template__form">
+                    <figure class="icon">
+                        <img src="/assets/icon-dollar.svg" alt="Dollar icon">
+                    </figure>
+                    <input id="billAmount" class="input" type="number" autocomplete="off" required placeholder="0">
+                </form>
+            </div>
+
+            <div class="people">
+                <div class="people__text">
+                    <h2 class="headers">Number of People</h2>
+                    <p id="textWarningPeople" class="hide">Can´t be zero</p>
+                </div>
+                <form id="formPeople" class="template__form">
+                    <figure class="icon">
+                        <img src="/assets/icon-person.svg" alt="People icon">
+                    </figure>
+                    <input id="numberPeople" class="input" type="number" autocomplete="off" required placeholder="0">
+                </form>
+            </div>
+
+            <div class="tip_to_select">
+                <h2 class="headers">Select Tip %</h2>
+                <div class="tipsGrid">
+                    <p id="tip5" class="tips_item">5%</p>
+                    <p id="tip10" class="tips_item">10%</p>
+                    <p id="tip15" class="tips_item">15%</p>
+                    <p id="tip25" class="tips_item">25%</p>
+                    <p id="tip50" class="tips_item">50%</p>
+                    <p id="tipCustom" class="tips_item">Custom</p>
+                    <input id="customTipInput" class="tips_item hide" type="number" placeholder="0%">
+                </div>
+            </div>            
+
+        </section>
+
+            
+        <section class="tips__results">
+
+            <div class="container__tip_per_person">
+
+                <div class="textContainer">
+                    <p class="text_1"> Tip Amount </p>
+                    <p class="text_2"> / person </p>
+                </div>
+
+                <p id="personalTipAmount" class="amount"></p>
+            </div>
+
+            <div class="container__count_per_person">
+
+                <div class="textContainer">
+                    <p class="text_1"> Count Amount </p>
+                    <p class="text_2"> / person </p>
+                </div>
+
+                <p id="personalCountAmount" class="amount"></p>
+            </div>
+
+            <div class="container__total_tip">
+                <p class="text"> Total </p>
+                <p id="totalTipAmount" class="amount"></p>
+            </div>
+
+            <button id="resetButton" class="resetButton" type="button" >
+                Reset
+            </button>
+        </section>
+
+    </main>
+
+    <script src="src/main.js"></script>
+</body>
+</html>

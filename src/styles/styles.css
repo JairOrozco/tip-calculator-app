@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background: hsl(185deg, 41%, 84%);
+}
+
+h1 {
+  width: 100%;
+  padding: 50px 0;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.headers {
+  padding: 10px 0;
+  font-size: 1.6rem;
+}
+
+.template__form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 7px;
+  background: hsl(180deg, 24%, 96%);
+}
+.template__form .icon {
+  width: 10%;
+}
+.template__form .icon img {
+  width: 15px;
+}
+.template__form .input {
+  width: 90%;
+  height: 25px;
+  font-family: "Space Mono", monospace;
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-align: end;
+  color: hsl(183deg, 100%, 15%);
+  border: none;
+  outline: none;
+  background-color: hsl(180deg, 24%, 96%);
+}
+
+.requiereField {
+  border: 1px solid red;
+}
+
+.tips {
+  width: 100%;
+  padding: 25px;
+  border-radius: 15px 15px 0 0;
+  background: hsl(0deg, 0%, 100%);
+}
+.tips__setData {
+  width: 100%;
+}
+.tips__setData .bill {
+  width: 100%;
+  margin: 0 0 15px 0;
+}
+.tips__setData .tip_to_select {
+  width: 100%;
+  margin: 15px 0;
+}
+.tips__setData .tip_to_select .tipsGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 155px);
+  grid-template-rows: repeat(3, 50px);
+  place-content: center;
+  place-items: center;
+  gap: 10px 15px;
+}
+.tips__setData .tip_to_select .tipsGrid .tips_item {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 2px;
+  color: white;
+  border-radius: 5px;
+  background: hsl(183deg, 100%, 15%);
+}
+.tips__setData .tip_to_select .tipsGrid .tips_item:nth-last-child(1) {
+  color: hsl(183deg, 100%, 15%);
+  background: hsl(180deg, 24%, 96%);
+}
+.tips__setData .tip_to_select .tipsGrid .backgroundChanged {
+  background: hsl(172deg, 67%, 45%);
+}
+.tips__setData .tip_to_select .tipsGrid .bordersChanged {
+  border: 2px solid hsl(172deg, 67%, 45%);
+}
+.tips__setData .tip_to_select .tipsGrid .inputFocus:focus {
+  outline: none;
+  border: 2px solid hsl(172deg, 67%, 45%);
+}
+.tips__setData .tip_to_select .tipsGrid .hide {
+  display: none;
+}
+.tips__setData .people {
+  width: 100%;
+  margin: 15px 0 15px 0;
+}
+.tips__setData .people__text {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tips__setData .people__text .warning {
+  display: block;
+  font-size: 1.2rem;
+  color: red;
+}
+.tips .hide {
+  display: none;
+}
+.tips__results {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  border-radius: 15px;
+  background: hsl(183deg, 100%, 15%);
+}
+.tips__results .container__tip_per_person, .tips__results .container__count_per_person {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.tips__results .container__tip_per_person .textContainer, .tips__results .container__count_per_person .textContainer {
+  width: 40%;
+}
+.tips__results .container__tip_per_person .textContainer .text_1, .tips__results .container__count_per_person .textContainer .text_1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: hsl(0deg, 0%, 100%);
+}
+.tips__results .container__tip_per_person .textContainer .text_2, .tips__results .container__count_per_person .textContainer .text_2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: hsl(184deg, 14%, 56%);
+}
+.tips__results .container__tip_per_person .amount, .tips__results .container__count_per_person .amount {
+  width: 60%;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: end;
+  color: hsl(172deg, 67%, 45%);
+}
+.tips__results .container__total_tip {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.tips__results .container__total_tip .text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: hsl(0deg, 0%, 100%);
+}
+.tips__results .container__total_tip .amount {
+  width: 60%;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: end;
+  color: hsl(172deg, 67%, 45%);
+}
+.tips__results .resetButton {
+  width: 100%;
+  height: 50px;
+  font-family: "Space Mono", monospace;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 7px;
+  outline: none;
+  text-transform: uppercase;
+  color: hsl(183deg, 100%, 15%);
+  background: hsl(172deg, 67%, 45%);
+}
+.tips__results .resetButton:disabled {
+  opacity: 0.3;
+}
+
+@media (min-width: 900px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .tips {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    border-radius: 15px;
+    background: hsl(0deg, 0%, 100%);
+  }
+  .tips__setData {
+    width: 50%;
+  }
+  .tips__setData .tip_to_select .tipsGrid {
+    grid-template-columns: repeat(3, 130px);
+    grid-template-rows: repeat(2, 50px);
+  }
+  .tips__setData .tip_to_select .tipsGrid .tips_item:hover {
+    cursor: pointer;
+    background: hsl(186deg, 14%, 43%);
+  }
+  .tips__results {
+    width: 45%;
+    height: 380px;
+    position: relative;
+    justify-content: flex-start;
+  }
+  .tips__results .resetButton {
+    width: 330px;
+    position: absolute;
+    bottom: 25px;
+  }
+  .tips__results .resetButton:hover {
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=styles.css.map */

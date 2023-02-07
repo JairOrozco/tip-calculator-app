@@ -1,0 +1,298 @@
+//Variables
+
+$font: 'Space Mono', monospace;
+
+//Colors
+
+//Primary
+
+$cyan: hsl(172, 67%, 45%);
+
+//Neutral
+
+$VeryDarkCyan: hsl(183, 100%, 15%);
+$DarkGrayishCyan: hsl(186, 14%, 43%);
+$GrayisCyan: hsl(184, 14%, 56%);
+$LightGrayishCyan: hsl(185, 41%, 84%);
+$VeryLightGrayishCyan: hsl(180, 24%, 96%);
+$White: hsl(0, 0%, 100%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $font;
+    background: $LightGrayishCyan;
+}
+
+h1 {
+    width: 100%;
+    padding: 50px 0;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.headers {
+    padding: 10px 0;
+    font-size: 1.6rem;
+}
+
+.template__form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 7px;
+    background: $VeryLightGrayishCyan;
+    
+    .icon {
+        width: 10%;
+        img {
+            width: 15px;
+        }
+    }
+
+    .input {
+        width: 90%;
+        height: 25px;
+        font-family: $font;
+        font-size: 2.6rem;
+        font-weight: 700;
+        text-align: end;
+        color: $VeryDarkCyan;
+        border: none;
+        outline: none;
+        background-color: $VeryLightGrayishCyan;
+    }
+}
+
+.requiereField {
+    border: 1px solid red;
+}
+
+.tips {
+    width: 100%;
+    padding: 25px;
+    border-radius: 15px 15px 0 0;
+    background: $White;
+
+    &__setData {
+        width: 100%;
+        .bill {
+            width: 100%;
+            margin: 0 0 15px 0;
+        }
+        .tip_to_select {
+            width: 100%;
+            margin: 15px 0;
+
+            .tipsGrid {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(2, 155px);
+                grid-template-rows: repeat(3, 50px);
+                place-content: center;
+                place-items: center;
+                gap: 10px 15px;
+                .tips_item {
+                    width: 100%;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    text-align: center;
+                    letter-spacing: 2px;
+                    color: white;
+                    border-radius: 5px;
+                    background: $VeryDarkCyan;
+                }
+                .tips_item:nth-last-child(1) {
+                    color: $VeryDarkCyan;
+                    background: $VeryLightGrayishCyan;
+                }
+                // .tips_item:hover {
+                //     cursor: pointer;
+                //     background: $DarkGrayishCyan;
+                // }
+                .backgroundChanged {
+                    background: $cyan;
+                }
+                .bordersChanged {
+                    border: 2px solid $cyan;
+                }
+                .inputFocus:focus {
+                    outline: none;
+                    border: 2px solid $cyan;
+                }
+                .hide {
+                    display: none;
+                }
+            }
+        }
+        .people {
+            width: 100%;
+            margin: 15px 0 15px 0;
+            &__text {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .warning {
+                    display: block;
+                    font-size: 1.2rem;
+                    color: red;
+                }
+            }
+        }
+    }
+
+    .hide {
+        display: none;
+    }
+
+    &__results {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        border-radius: 15px;
+        background: $VeryDarkCyan;
+
+        .container__tip_per_person, .container__count_per_person {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            .textContainer {
+                width: 40%;
+                
+                .text_1 {
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    color: $White;
+                }
+                .text_2 {
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    color: $GrayisCyan;
+                }
+            }
+            .amount {
+                width: 60%;
+                font-size: 1.8rem;
+                font-weight: 700;
+                text-align: end;
+                color: $cyan;
+            }
+        }
+
+        .container__total_tip {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            .text {
+                font-size: 1.4rem;
+                font-weight: 700;
+                color: $White;
+            }
+            .amount {
+                width: 60%;
+                font-size: 1.8rem;
+                font-weight: 700;
+                text-align: end;
+                color: $cyan;
+            }
+
+        }
+
+        .resetButton {
+            width: 100%;
+            height: 50px;
+            font-family: $font;
+            font-size: 1.8rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 7px;
+            outline: none;
+            text-transform: uppercase;
+            color: $VeryDarkCyan;
+            background: $cyan;
+        }
+
+        .resetButton:disabled {
+            opacity: .3;
+        }
+    }
+}
+
+
+@media ( min-width: 900px ) {
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .tips {
+        width: 100%;
+        max-width: 900px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px;
+        border-radius: 15px;
+        background: $White;
+
+        &__setData {
+            width: 50%;
+            .tip_to_select {
+                
+                .tipsGrid {
+                    grid-template-columns: repeat(3, 130px);
+                    grid-template-rows: repeat(2, 50px);
+
+                    .tips_item:hover {
+                        cursor: pointer;
+                        background: $DarkGrayishCyan;
+                    }
+                }
+            }
+        }
+
+        &__results {
+            width: 45%;
+            height: 380px;
+            position: relative;
+            justify-content: flex-start;
+            
+
+            .resetButton {
+                width: 330px;
+                position: absolute;
+                bottom: 25px;
+            }
+
+            .resetButton:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
